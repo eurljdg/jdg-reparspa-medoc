@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>JDG Répar'Spa Médoc — Réparation & Entretien de spas à Hourtin</title>
-  <meta name="description" content="JDG Répar'Spa Médoc — Spécialiste de la réparation et de l'entretien de spas à Hourtin et dans tout le Médoc. Dépannage, entretien, pièces détachées et contrats d'entretien." />
+  <meta name="description" content="JDG Répar'Spa Médoc — Spécialiste de la réparation et de l'entretien de spas dans tout le Médoc. Dépannage, entretien, pièces détachées et contrats d'entretien." />
   <meta name="keywords" content="réparation spa Hourtin, entretien spa Médoc, dépannage spa Gironde, réparation jacuzzi Hourtin" />
   <link rel='icon' href='favicon.ico' />
   <style>
@@ -55,11 +55,10 @@
       "addressCountry": "FR"
     },
     "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens":"09:00", "closes":"18:00"},
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens":"09:00", "closes":"12:00"}
-    ],
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens":"08:00", "closes":"18:00"},
+          ],
     "priceRange": "€€",
-    "areaServed": ["Hourtin","Carcans","Maubuisson","Lesparre-Médoc","Lacanau"]
+    "areaServed": ["Hourtin","Carcans","Maubuisson","Lesparre-Médoc","Soulac","Lacanau"]
   }
   </script>
 </head>
@@ -74,8 +73,8 @@
         </div>
       </div>
       <div style="padding-top:14px">
-        <h1>Spécialiste de la réparation et de l'entretien de spas à Hourtin et dans tout le Médoc.</h1>
-        <p class="lead">Dépannage rapide, entretien complet, remplacement de pièces et contrats d'entretien pour spas et jacuzzis — intervention locale, professionnelle et durable.</p>
+        <h1>Spécialiste de la réparation et de l'entretien de spas dans tout le Médoc.</h1>
+        <p class="lead">Dépannage rapide, entretien complet, remplacement de pièces pour spas et jacuzzis — intervention locale, professionnelle et durable.</p>
       </div>
     </div>
   </header>
@@ -95,7 +94,7 @@
           </div>
           <div class="service card">
             <strong>Dépannage à domicile</strong>
-            <p class="meta">Interventions rapides à Hourtin et sur tout le Médoc.</p>
+            <p class="meta">Interventions rapides sur tout le Médoc.</p>
           </div>
           <div class="service card">
             <strong>Pièces & accessoires</strong>
@@ -105,11 +104,7 @@
             <strong>Installation & mise en service</strong>
             <p class="meta">Aide au raccordement et tests de mise en route.</p>
           </div>
-          <div class="service card">
-            <strong>Contrats d'entretien</strong>
-            <p class="meta">Formules annuelles pour les particuliers et locations saisonnières.</p>
-          </div>
-        </div>
+         </div>
       </div>
 
       <aside class="card">
@@ -140,27 +135,42 @@
       <h2>Contact & Devis rapide</h2>
       <div class="contact-grid">
         <div class="card">
-          <p>Pour un diagnostic ou un devis gratuit, appelez directement :</p>
+          <p>Pour un diagnostic ou un devis, appelez directement :</p>
           <p style="font-size:20px; font-weight:700;"><a href="tel:+33625698770">06 25 69 87 70</a></p>
           <p class="meta">Ou envoyez un e-mail : <a href="mailto:eurljdg@gmail.com">eurljdg@gmail.com</a></p>
           <h4 style="margin-top:12px">Horaires</h4>
-          <p class="meta">Lundi - Vendredi : 09:00 - 18:00<br>Samedi : 09:00 - 12:00<br>Dimanche : Fermé</p>
+          <p class="meta">Lundi - Vendredi : 08:00 - 18:00</p>
           <h4 style="margin-top:12px">Avis clients</h4>
           <p class="meta">Ajoutez ici vos meilleurs avis Google pour renforcer la confiance des visiteurs.</p>
         </div>
 
-        <div class="card">
-          <form id="contactForm" action="tel:+33625698770" method="get" onsubmit="return false;">
-            <input type="text" name="Nom" placeholder="Votre nom" required />
-            <input type="tel" name="Telephone" placeholder="Téléphone (nous appelons)" required />
-            <input type="text" name="Localite" placeholder="Votre ville (ex : Hourtin)" />
-            <textarea name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)"></textarea>
-            <button type="button" onclick="startCall()">Nous appeler</button>
-          </form>
-          <p class="meta" style="margin-top:8px">En appuyant sur le bouton, votre téléphone tentera d'appeler directement notre numéro.</p>
-        </div>
-      </div>
-    </section>
+       <div class="card">
+  <form id="contactForm" onsubmit="sendMail(); return false;">
+    <input type="text" id="nom" name="Nom" placeholder="Votre nom" required />
+    <input type="tel" id="telephone" name="Telephone" placeholder="Téléphone (facultatif)" />
+    <input type="text" id="localite" name="Localite" placeholder="Votre ville (ex : Hourtin)" />
+    <textarea id="message" name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)"></textarea>
+    <button type="submit">Envoyer un message</button>
+  </form>
+  <p class="meta" style="margin-top:8px">
+    Ce formulaire ouvrira automatiquement un e-mail à <strong>eurljdg@gmail.com</strong>.
+  </p>
+</div>
+
+<script>
+  function sendMail() {
+    const nom = encodeURIComponent(document.getElementById('nom').value);
+    const tel = encodeURIComponent(document.getElementById('telephone').value);
+    const localite = encodeURIComponent(document.getElementById('localite').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+
+    const subject = `Demande de contact - ${nom}`;
+    const body = `Nom : ${nom}%0A📞 Téléphone : ${tel}%0A🏡 Ville : ${localite}%0A📝 Message : ${message}`;
+
+    window.location.href = `mailto:eurljdg@gmail.com?subject=${subject}&body=${body}`;
+  }
+</script>
+
 
   </main>
 
