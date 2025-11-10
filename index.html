@@ -149,20 +149,25 @@
           <p class="meta">Ajoutez ici vos meilleurs avis Google pour renforcer la confiance des visiteurs.</p>
         </div>
 
-        <div class="card">
-          <form id="contactForm" action="tel:+33625698770" method="get" onsubmit="return false;">
-            <input type="text" name="Nom" placeholder="Votre nom" required />
-            <input type="tel" name="Telephone" placeholder="Téléphone (nous appelons)" required />
-            <input type="text" name="Localite" placeholder="Votre ville (ex : Hourtin)" />
-            <textarea name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)"></textarea>
-            <button type="button" onclick="startCall()">Nous appeler</button>
-          </form>
-          <p class="meta" style="margin-top:8px">En appuyant sur le bouton, votre téléphone tentera d'appeler directement notre numéro.</p>
-        </div>
-      </div>
-    </section>
+     <div class="card">
+  <form id="contactForm" onsubmit="sendMail(); return false;">
+    <input type="text" id="nom" name="Nom" placeholder="Votre nom" required />
+    <input type="tel" id="telephone" name="Telephone" placeholder="Téléphone (facultatif)" />
+    <input type="text" id="localite" name="Localite" placeholder="Votre ville (ex : Hourtin)" />
+    <textarea id="message" name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)"></textarea>
+    <button type="submit">Envoyer un message</button>
+  </form>
+  <p class="meta" style="margin-top:8px">
+    Ce formulaire ouvrira automatiquement un e-mail à <strong>eurljdg@gmail.com</strong>.
+  </p>
+</div>
 
-  </main>
+<script>
+  function sendMail() {
+    const nom = encodeURIComponent(document.getElementById('nom').value);
+    const tel = encodeURIComponent(document.getElementById('telephone').value);
+    const localite = encodeURIComponent(document.getEleme
+
 
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
