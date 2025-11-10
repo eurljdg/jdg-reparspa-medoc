@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eurljdg.github.io/jdg-reparspa-medoc/sitemap.xml
