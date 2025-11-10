@@ -1,187 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JDG Répar'Spa Médoc — Réparation & Entretien de spas à Hourtin</title>
-  <meta name="description" content="JDG Répar'Spa Médoc — Spécialiste de la réparation et de l'entretien de spas à Hourtin et dans tout le Médoc. Dépannage, entretien, pièces détachées et contrats d'entretien." />
-  <meta name="keywords" content="réparation spa Hourtin, entretien spa Médoc, dépannage spa Gironde, réparation jacuzzi Hourtin" />
-  <link rel='icon' href='favicon.ico' />
-  <style>
-    :root{--accent:#7fb3a7;--dark:#243238;--muted:#6b7b78;--bg:#fbf8f4;--card:#ffffff}
-    *{box-sizing:border-box}
-    body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--dark); background:var(--bg); line-height:1.6}
-    a{color:var(--accent); text-decoration:none}
-    header{background-image:url('images/banner-spa-hourtin.jpg'); background-size:cover; background-position:center; padding:72px 18px; color:white}
-    .overlay{background:linear-gradient(180deg, rgba(11,20,18,0.45), rgba(11,20,18,0.15)); padding:32px; border-radius:12px; max-width:1100px; margin:0 auto}
-    .container{max-width:1100px; margin:0 auto; padding:28px}
-    .topbar{display:flex;justify-content:space-between;align-items:center; gap:12px}
-    .logo{font-weight:800; font-size:20px; color:var(--bg)}
-    .cta{display:flex; gap:8px}
-    .btn{background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; display:inline-block; box-shadow:0 6px 18px rgba(127,179,167,0.16)}
-    .btn.ghost{background:transparent; color:var(--bg); border:1px solid rgba(255,255,255,0.12)}
-    h1{font-size:30px;margin:8px 0; color: #fff;}
-    p.lead{margin:8px 0 18px; color:rgba(255,255,255,0.92); max-width:820px}
-    .grid{display:grid;grid-template-columns:2fr 1fr; gap:18px; align-items:start}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 22px rgba(36,50,56,0.06)}
-    .services{display:grid;grid-template-columns:repeat(2,1fr); gap:12px}
-    .service{padding:12px; border-radius:8px}
-    .service strong{display:block; margin-bottom:6px}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px}
-    .gallery img{width:100%; height:160px; object-fit:cover; border-radius:8px; box-shadow:0 6px 18px rgba(36,50,56,0.06)}
-    footer{background:#f2efe9;padding:20px; margin-top:28px; border-top:1px solid #e6e1db}
-    .contact-grid{display:grid;grid-template-columns:1fr 360px; gap:18px}
-    form input, form textarea{width:100%; padding:10px;border:1px solid #e6e1db;border-radius:8px;margin-bottom:8px; background:transparent}
-    form button{background:var(--accent); color:#fff; padding:10px 14px;border-radius:8px;border:0}
-    .meta{color:var(--muted);font-size:14px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr} .services{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)} .contact-grid{grid-template-columns:1fr} header{padding:36px 12px}}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "JDG Répar'Spa Médoc",
-    "image": "images/banner-spa-hourtin.jpg",
-    "@id": "",
-    "url": "",
-    "telephone": "+33 6 25 69 87 70",
-    "email": "eurljdg@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "57, rue de Lachanau",
-      "addressLocality": "Hourtin",
-      "postalCode": "33990",
-      "addressRegion": "Nouvelle-Aquitaine",
-      "addressCountry": "FR"
-    },
-    "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens":"08:00", "closes":"18:00"},
-      {"@type": "OpeningHoursSpecification"
-    ],
-    "priceRange": "€€",
-    "areaServed": ["Hourtin","Carcans","Maubuisson","Lesparre-Médoc","Lacanau"]
-  }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDG Répar’Spa Médoc – Réparation & Entretien de Spas à Hourtin</title>
+  <meta name="description" content="Spécialiste de la réparation et de l’entretien de spas à Hourtin et dans tout le Médoc. Service rapide, professionnel et chaleureux." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="overlay">
-      <div class="topbar">
-        <div class="logo">JDG Répar'Spa Médoc</div>
-        <div class="cta">
-          <a class="btn" href="tel:+33625698770">Appeler maintenant</a>
-          <a class="btn ghost" href="#contact">Demander un devis</a>
-        </div>
-      </div>
-      <div style="padding-top:14px">
-        <h1>Spécialiste de la réparation et de l'entretien de spas à Hourtin et dans tout le Médoc.</h1>
-        <p class="lead">Dépannage rapide, entretien complet, remplacement de pièces et contrats d'entretien pour spas et jacuzzis — intervention locale, professionnelle et durable.</p>
-      </div>
-    </div>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- En-tête -->
+  <header class="bg-blue-700 text-white text-center py-6 shadow-md">
+    <h1 class="text-3xl font-bold">JDG Répar’Spa Médoc</h1>
+    <p class="text-lg mt-2">Spécialiste de la réparation et de l’entretien de spas à Hourtin et dans tout le Médoc</p>
   </header>
 
-  <main class="container">
-    <section class="grid" aria-label="Services principaux">
-      <div class="card">
-        <h2>Nos services</h2>
-        <div class="services">
-          <div class="service card">
-            <strong>Réparation toutes marques</strong>
-            <p class="meta">Pompes, réchauffeurs, cartes électroniques, fuites.</p>
-          </div>
-          <div class="service card">
-            <strong>Entretien & nettoyage</strong>
-            <p class="meta">Vidange, traitement de l'eau, nettoyage du circuit hydraulique.</p>
-          </div>
-          <div class="service card">
-            <strong>Dépannage à domicile</strong>
-            <p class="meta">Interventions rapides à Hourtin et sur tout le Médoc.</p>
-          </div>
-          <div class="service card">
-            <strong>Pièces & accessoires</strong>
-            <p class="meta">Pompes, filtres, cartouches, couvertures et plus.</p>
-          </div>
-          <div class="service card">
-            <strong>Installation & mise en service</strong>
-            <p class="meta">Aide au raccordement et tests de mise en route.</p>
-          </div>
-          <div class="service card">
-            <strong>Contrats d'entretien</strong>
-            <p class="meta">Formules annuelles pour les particuliers et locations saisonnières.</p>
-          </div>
-        </div>
-      </div>
+  <!-- Section À propos -->
+  <section id="about" class="max-w-4xl mx-auto text-center py-10 px-4">
+    <h2 class="text-2xl font-semibold mb-4">À propos</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Basé à <strong>Hourtin (33990)</strong>, JDG Répar’Spa Médoc intervient dans tout le Médoc pour la
+      <strong>réparation</strong>, l’<strong>entretien</strong> et la <strong>maintenance</strong> de spas toutes marques.
+      Un service de proximité, professionnel et attentif à vos besoins.
+    </p>
+  </section>
 
-      <aside class="card">
-        <h3>À propos</h3>
-        <p>JDG Répar'Spa Médoc est une entreprise locale basée à Hourtin. Technicien expérimenté, j'apporte un service fiable et transparent : diagnostic rapide, pièces garanties et conseils d'entretien.</p>
-        <p class="meta"><strong>Adresse :</strong> 57, rue de Lachanau, 33990 Hourtin</p>
-        <p class="meta"><strong>Téléphone :</strong> <a href="tel:+33625698770">06 25 69 87 70</a></p>
-        <p class="meta"><strong>E-mail :</strong> <a href="mailto:eurljdg@gmail.com">eurljdg@gmail.com</a></p>
-        <h4 style="margin-top:12px">Zone d'intervention</h4>
-        <p class="meta">Hourtin, Carcans, Maubuisson, Lesparre-Médoc, Lacanau et tout le Médoc.</p>
-      </aside>
-    </section>
-
-    <section style="margin-top:22px">
-      <h2>Nos réalisations</h2>
-      <p class="meta">Exemples de réparations, installations et interventions réalisées dans la région.</p>
-      <div class="gallery" style="margin-top:12px">
-        <img src="images/intervention-technicien.jpg" alt="Technicien en intervention JDG Répar'Spa Médoc" />
-        <img src="images/spa-avant.jpg" alt="Spa avant réparation" />
-        <img src="images/spa-apres.jpg" alt="Spa après réparation" />
-        <img src="images/pieces-techniques.jpg" alt="Pièces techniques et pompe de spa" />
-        <img src="images/installation-exterieure.jpg" alt="Installation extérieure de spa" />
-        <img src="images/vehicule-intervention.jpg" alt="Véhicule d'intervention JDG Répar'Spa Médoc" />
-      </div>
-    </section>
-
-    <section id="contact" style="margin-top:28px">
-      <h2>Contact & Devis rapide</h2>
-      <div class="contact-grid">
-        <div class="card">
-          <p>Pour un diagnostic ou un devis gratuit, appelez directement :</p>
-          <p style="font-size:20px; font-weight:700;"><a href="tel:+33625698770">06 25 69 87 70</a></p>
-          <p class="meta">Ou envoyez un e-mail : <a href="mailto:eurljdg@gmail.com">eurljdg@gmail.com</a></p>
-          <h4 style="margin-top:12px">Horaires</h4>
-          <p class="meta">Lundi - Vendredi : 08:00 - 18:00<br>
-          <h4 style="margin-top:12px">Avis clients</h4>
-          <p class="meta">Ajoutez ici vos meilleurs avis Google pour renforcer la confiance des visiteurs.</p>
-        </div>
-
-     <div class="card">
-  <form id="contactForm" onsubmit="sendMail(); return false;">
-    <input type="text" id="nom" name="Nom" placeholder="Votre nom" required />
-    <input type="tel" id="telephone" name="Telephone" placeholder="Téléphone (facultatif)" />
-    <input type="text" id="localite" name="Localite" placeholder="Votre ville (ex : Hourtin)" />
-    <textarea id="message" name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)"></textarea>
-    <button type="submit">Envoyer un message</button>
-  </form>
-  <p class="meta" style="margin-top:8px">
-    Ce formulaire ouvrira automatiquement un e-mail à <strong>eurljdg@gmail.com</strong>.
-  </p>
-</div>
-
-<script>
-  function sendMail() {
-    const nom = encodeURIComponent(document.getElementById('nom').value);
-    const tel = encodeURIComponent(document.getElementById('telephone').value);
-    const localite = encodeURIComponent(document.getEleme
-
-
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
-      <div>
-        <strong>JDG Répar'Spa Médoc</strong><br>
-        57, rue de Lachanau — 33990 Hourtin<br>
-        <a href="tel:+33625698770">06 25 69 87 70</a> • <a href="mailto:eurljdg@gmail.com">eurljdg@gmail.com</a>
-      </div>
-      <div class="meta">© JDG Répar'Spa Médoc — Site vitrine • Conçu pour le référencement local</div>
+  <!-- Galerie de photos -->
+  <section id="galerie" class="bg-white py-10">
+    <h2 class="text-2xl font-semibold text-center mb-6">Quelques réalisations</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 max-w-5xl mx-auto">
+      <img src="PXL_20230615_072704509.jpg" alt="Spa en réparation" class="rounded-xl shadow-md">
+      <img src="20200527_143700.jpg" alt="Spa extérieur" class="rounded-xl shadow-md">
+      <img src="20200701_160704.jpg" alt="Entretien de spa" class="rounded-xl shadow-md">
+      <img src="IMG_20220119_160137.jpg" alt="Spa en cours d’installation" class="rounded-xl shadow-md">
+      <img src="PXL_20231025_132855732.MP.jpg" alt="Dépannage spa" class="rounded-xl shadow-md">
+      <img src="PXL_20250124_093332775.jpg" alt="Spa réparé" class="rounded-xl shadow-md">
     </div>
+  </section>
+
+  <!-- Horaires -->
+  <section id="horaires" class="text-center py-10 bg-gray-100">
+    <h2 class="text-2xl font-semibold mb-2">Horaires d’ouverture</h2>
+    <p>Lundi - Vendredi : 09:00 - 18:00</p>
+  </section>
+
+  <!-- Contact & Devis rapide -->
+  <section id="contact" class="py-10 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Contact & Devis rapide</h2>
+      <p class="text-gray-600 mb-6">Besoin d’un dépannage ou d’un entretien de spa ? Envoyez-nous un message en un clic.</p>
+
+      <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6">
+        <form id="contactForm" onsubmit="sendMail(); return false;" class="flex flex-col gap-3">
+          <input type="text" id="nom" name="Nom" placeholder="Votre nom *" required class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <input type="tel" id="telephone" name="Telephone" placeholder="Téléphone (facultatif)" class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <input type="text" id="localite" name="Localite" placeholder="Votre ville (ex : Hourtin)" class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <textarea id="message" name="Message" rows="4" placeholder="Votre message (ex : panne, date souhaitée)" class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl py-2 transition-all">
+            ✉️ Envoyer un message
+          </button>
+        </form>
+        <p class="text-sm text-gray-500 mt-3">
+          Ce formulaire ouvrira automatiquement un e-mail à <strong>eurljdg@gmail.com</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-blue-700 text-white text-center py-6 mt-10">
+    <p class="text-lg font-semibold">JDG Répar’Spa Médoc</p>
+    <p>57 rue de Lachanau, 33990 Hourtin</p>
+    <p>Tél : <a href="tel:+33625698770" class="underline">06 25 69 87 70</a></p>
+    <p>Email : <a href="mailto:eurljdg@gmail.com" class="underline">eurljdg@gmail.com</a></p>
   </footer>
 
   <script>
-    function startCall(){ window.location.href = 'tel:+33625698770'; }
+    function sendMail() {
+      const nom = encodeURIComponent(document.getElementById('nom').value);
+      const tel = encodeURIComponent(document.getElementById('telephone').value);
+      const localite = encodeURIComponent(document.getElementById('localite').value);
+      const message = encodeURIComponent(document.getElementById('message').value);
+
+      const subject = `Demande de contact - ${nom}`;
+      const body = `Nom : ${nom}%0A📞 Téléphone : ${tel}%0A🏡 Ville : ${localite}%0A📝 Message : ${message}`;
+
+      alert("Votre message est prêt à être envoyé !");
+      window.location.href = `mailto:eurljdg@gmail.com?subject=${subject}&body=${body}`;
+    }
   </script>
+
 </body>
 </html>
