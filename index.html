@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Spécialiste de la réparation et de l’entretien de spas à Hourtin et dans tout le Médoc. JDG Répar’Spa Médoc assure dépannage, maintenance et conseils pour prolonger la vie de votre spa." />
-
-    <!-- ✅ Balise Google Search Console -->
+    
+    <!-- ✅ Vérification Google Search Console -->
     <meta name="google-site-verification" content="-JFH8YQEhY65lYx7V7K1YVvUzhSIkq89u6WT6dwJIx4" />
 
     <title>JDG Répar’Spa Médoc | Entretien & Réparation de Spas à Hourtin</title>
@@ -13,32 +13,37 @@
   </head>
 
   <body class="bg-gray-100 text-gray-800 font-sans">
-    <header class="bg-blue-900 text-white p-6 text-center shadow-lg">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white text-center p-8 shadow-lg">
       <h1 class="text-3xl font-bold mb-2">JDG Répar’Spa Médoc</h1>
       <p class="text-lg italic">Spécialiste de la réparation et de l’entretien de spas à Hourtin et dans tout le Médoc</p>
     </header>
 
     <main class="max-w-5xl mx-auto p-6 space-y-16">
 
-      <!-- Section Présentation -->
+      <!-- À propos -->
       <section class="text-center">
-        <h2 class="text-2xl font-semibold mb-4 text-blue-800">Bienvenue chez JDG Répar’Spa Médoc</h2>
-        <p class="text-lg leading-relaxed">
-          Basé à Hourtin, nous sommes spécialisés dans la <strong>réparation</strong> et <strong>l’entretien</strong> de spas toutes marques. 
-          Nous intervenons dans tout le <strong>Médoc</strong> pour prolonger la durée de vie de votre installation et garantir votre bien-être.
+        <h2 class="text-2xl font-semibold mb-4 text-blue-800">À propos</h2>
+        <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+          Basé à Hourtin, <strong>JDG Répar’Spa Médoc</strong> est votre spécialiste de confiance pour la 
+          <strong>réparation, l’entretien et le dépannage de spas</strong> dans tout le Médoc.  
+          Fort d’une solide expérience, j’interviens rapidement pour redonner à votre spa tout son confort et sa performance, quelle que soit la marque.  
+          Soucieux de la satisfaction de mes clients, j’assure un service <strong>fiable, soigné et personnalisé</strong>, avec un vrai sens du contact humain.  
+          <br><br>
+          📍 Intervention à Hourtin, Carcans, Lacanau, Lesparre et les environs.
         </p>
       </section>
 
       <!-- Galerie Photos -->
       <section>
-        <h2 class="text-2xl font-semibold mb-4 text-blue-800 text-center">Nos réalisations</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-blue-800 text-center">Nos réalisations</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img src="PXL_20231025_132855732.MP.jpg" alt="Réparation spa" class="rounded-xl shadow-md" />
-          <img src="20200527_143700.jpg" alt="Spa installé" class="rounded-xl shadow-md" />
-          <img src="PXL_20230615_072704509.jpg" alt="Dépannage spa" class="rounded-xl shadow-md" />
-          <img src="IMG_20220119_160137.jpg" alt="Entretien spa" class="rounded-xl shadow-md" />
-          <img src="PXL_20250124_093332775.jpg" alt="Réparation spa Médoc" class="rounded-xl shadow-md" />
-          <img src="20200701_160704.jpg" alt="Spa réparé" class="rounded-xl shadow-md" />
+          <img src="PXL_20231025_132855732.MP.jpg" alt="Spa réparé" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+          <img src="PXL_20230615_072704509.jpg" alt="Intervention technique" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+          <img src="IMG_20220119_160137.jpg" alt="Spa en service" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+          <img src="PXL_20250124_093332775.jpg" alt="Entretien spa Médoc" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+          <img src="20200701_160704.jpg" alt="Installation spa" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+          <img src="1663653814212.jpg" alt="Ambiance spa" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
         </div>
       </section>
 
@@ -60,9 +65,9 @@
         </div>
 
         <p class="text-sm text-gray-600 mt-4">
-          Ou contactez-nous directement : <br>
           📞 <a href="tel:+33625698770" class="text-blue-700 font-semibold">06 25 69 87 70</a><br>
-          📧 <a href="mailto:eurljdg@gmail.com" class="text-blue-700 font-semibold">eurljdg@gmail.com</a>
+          📧 <a href="mailto:eurljdg@gmail.com" class="text-blue-700 font-semibold">eurljdg@gmail.com</a><br>
+          📍 57, rue de Lachanau, 33990 Hourtin
         </p>
       </section>
 
@@ -75,8 +80,14 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-blue-900 text-white text-center py-4 mt-16">
-      <p>© 2025 JDG Répar’Spa Médoc — Tous droits réservés</p>
+      <p>© <span id="year"></span> JDG Répar’Spa Médoc — Tous droits réservés</p>
     </footer>
+
+    <script>
+      // Script pour l'année automatique
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
