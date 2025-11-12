@@ -165,18 +165,19 @@
       </aside>
     </section>
 
-    <section style="margin-top:22px">
-      <h2>Nos réalisations</h2>
-      <p class="meta">Exemples de réparations, installations et interventions réalisées dans la région.</p>
-      <div class="gallery" style="margin-top:12px">
-        <img src="images/intervention-technicien.jpg" alt="Technicien en intervention JDG Répar'Spa Médoc" />
-        <img src="images/spa-avant.jpg" alt="Spa avant réparation" />
-        <img src="images/spa-apres.jpg" alt="Spa après réparation" />
-        <img src="images/pieces-techniques.jpg" alt="Pièces techniques et pompe de spa" />
-        <img src="images/installation-exterieure.jpg" alt="Installation extérieure de spa" />
-        <img src="images/vehicule-intervention.jpg" alt="Véhicule d'intervention JDG Répar'Spa Médoc" />
-      </div>
-    </section>
+   <section style="margin-top:22px">
+  <h2>Nos réalisations</h2>
+  <p class="meta">Exemples de réparations, installations et interventions réalisées dans la région.</p>
+  <div class="gallery" style="margin-top:12px">
+    <img src="images/intervention-technicien.jpg" alt="Technicien en intervention JDG Répar'Spa Médoc" onclick="openLightbox(this)" />
+    <img src="images/spa-avant.jpg" alt="Spa avant réparation" onclick="openLightbox(this)" />
+    <img src="images/spa-apres.jpg" alt="Spa après réparation" onclick="openLightbox(this)" />
+    <img src="images/pieces-techniques.jpg" alt="Pièces techniques et pompe de spa" onclick="openLightbox(this)" />
+    <img src="images/installation-exterieure.jpg" alt="Installation extérieure de spa" onclick="openLightbox(this)" />
+    <img src="images/vehicule-intervention.jpg" alt="Véhicule d'intervention JDG Répar'Spa Médoc" onclick="openLightbox(this)" />
+  </div>
+</section>
+
 
     <section id="contact" style="margin-top:28px">
       <h2>Contact & Devis rapide</h2>
@@ -227,5 +228,24 @@
       window.location.href = `mailto:eurljdg@gmail.com?subject=${subject}&body=${body}`;
     }
   </script>
+  <!-- Lightbox (agrandissement photo) -->
+<div id="lightbox" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center;">
+  <img id="lightbox-img" src="" alt="Agrandissement photo" style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.5);" />
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  function openLightbox(img) {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  }
+
+  lightbox.onclick = () => {
+    lightbox.style.display = 'none';
+  };
+</script>
+
 </body>
 </html>
